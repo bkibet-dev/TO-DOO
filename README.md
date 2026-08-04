@@ -1,16 +1,23 @@
-# React + Vite
+# 🥐 Batch & Bake Order Tracker
+A real-time React order management application
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+## 🔄 Information Flow & Architecture
 
-Currently, two official plugins are available:
+* **Parent-Child Component Tree:** Component **1** (Layout/App) holds the central state and passes data downwards to children.
+* **Downward Data Flow (Props):** State flows from the root layout container down to child components (like the form and order list) via **props**.
+* **Inverse Data Flow (Callbacks):** Child components (like Component **2** for order entry) use **callbacks** to send new data or updates back up to the parent container.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ⚙️ How It Works
 
-## React Compiler
+* **Order Creation:** Users submit new bakery orders through a specialized entry form, defining the customer name, item, quantity, and urgency level.
+* **Kanban Workflow Engine:** Orders function as dynamic tasks that are tracked and moved across distinct kitchen stages (*Mixing* $\rightarrow$ *In Oven* $\rightarrow$ *Ready for Pickup*).
+* **State Management:** Built using React to demonstrate core principles like unidirectional data flow, lifting state up, and parent-child component communication.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🎨 Styles & Fonts Used
 
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+* **Color Palette:**
+  * **Ivory Cream:** `#F5F5DA`
+  * **Crimson Wine:** `#7B021D`
+* **Typography:**
+  * **Headings:** Luxury editorial serif (e.g., *Playfair Display*)
+  * **UI Elements:** Clean modern sans-serif (e.g., *Montserrat*)
