@@ -175,3 +175,98 @@ h1, h2, h3, .app-header h1 {
   border-top: 1px solid rgba(123, 2, 29, 0.1);
   padding-top: 0.5rem;
 }
+.order-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.order-card {
+  background-color: #ffffff;
+  border: 1px solid #e2d9d2;
+  border-left: 5px solid #7B021D; /* Crimson Wine accent edge */
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid #f0eae1;
+  padding-bottom: 0.5rem;
+}
+
+.order-header h3 {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  color: #7B021D;
+  font-size: 1.25rem;
+}
+
+.order-description {
+  color: #555;
+  font-style: italic;
+  margin-bottom: 0.75rem;
+}
+
+.order-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.order-details p {
+  margin: 0;
+}
+
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-badge.pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status-badge.in-progress {
+  background-color: #cce5ff;
+  color: #004085;
+}
+
+.status-badge.completed {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.delete-btn {
+  background-color: #fff;
+  color: #7B021D;
+  border: 1px solid #7B021D;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.delete-btn:hover {
+  background-color: #7B021D;
+  color: #fff;
+}
