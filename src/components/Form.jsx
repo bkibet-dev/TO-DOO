@@ -55,6 +55,11 @@ export default function Form({ onAddTask }) {
         <input
           type="date"
           value={dueDate}
+          onClick={(e) => {
+            if (typeof e.target.showPicker === 'function') {
+              e.target.showPicker();
+            }
+          }}
           onChange={(e) => setDueDate(e.target.value)}
           required
         />
