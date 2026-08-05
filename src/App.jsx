@@ -7,17 +7,21 @@ export default function App() {
   const [tasks, setTasks] = useState([
     {
       id: 1,
-      name: 'Jane Doe',
       title: 'Chocolate Cake',
+      description: "Birthday cake with chocolate frosting",
       quantity: 2,
-      status: 'Pending'
+      dueDate: "2026-08-08",
+      status: 'Pending',
+      name: 'Jane Doe'
     },
     { 
       id: 2,
-      name: 'John Smith',
       title: 'Vanilla Cupcake',
+      description: "Classic vanilla cupcake with buttercream frosting",
       quantity: 6,
-      status: 'Completed'
+      dueDate: "2026-08-10",
+      status: 'Completed',
+      name: 'John Smith'
     }
   ]);
 
