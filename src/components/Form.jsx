@@ -4,7 +4,11 @@ export default function Form({ onAddTask }) {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [dueDate, setDueDate] = useState('');
+<<<<<<< HEAD
   const [status, setStatus] = useState('Mixing');
+=======
+  const [status, setStatus] = useState('Pending');
+>>>>>>> 5acdca2 (Add & Delete)
   const [name, setName] = useState('');
 
   const handleSubmit = (e) => {
@@ -20,11 +24,18 @@ export default function Form({ onAddTask }) {
     });
 
     setTitle('');
+<<<<<<< HEAD
     setDueDate('');
     setStatus('Pending');
     setDescription('');
     setName('');
     setOwner('');
+=======
+    setDescription('');
+    setDueDate('');
+    setStatus('Pending');
+    setName('');
+>>>>>>> 5acdca2 (Add & Delete)
   };
 
   return (
@@ -68,8 +79,13 @@ export default function Form({ onAddTask }) {
         <label>Workflow Status</label>
         <select value={status} onChange={(e) => setStatus(e.target.value)}>
           <option value="Pending">Pending</option>
+<<<<<<< HEAD
           <option value="In Oven">In Progress</option>
           <option value="Ready">Completed</option>
+=======
+          <option value="In Progress">In Progress</option>
+          <option value="Completed">Completed</option>
+>>>>>>> 5acdca2 (Add & Delete)
         </select>
       </div>
 
