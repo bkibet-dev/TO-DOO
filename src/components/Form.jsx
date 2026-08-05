@@ -5,7 +5,7 @@ export default function Form({ onAddTask }) {
   const [description, setDescription] = useState('');
   const [dueDate, setDueDate] = useState('');
   const [status, setStatus] = useState('Mixing');
-  const [owner, setOwner] = useState('');
+  const [name, setName] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -16,13 +16,14 @@ export default function Form({ onAddTask }) {
       description,
       dueDate,
       status,
-      owner,
+      name,
     });
 
     setTitle('');
-    setDescription('');
     setDueDate('');
-    setStatus('Mixing');
+    setStatus('Pending');
+    setDescription('');
+    setName('');
     setOwner('');
   };
 
@@ -61,9 +62,9 @@ export default function Form({ onAddTask }) {
       <div className="form-group">
         <label>Workflow Status</label>
         <select value={status} onChange={(e) => setStatus(e.target.value)}>
-          <option value="Mixing">Mixing</option>
-          <option value="In Oven">In Oven</option>
-          <option value="Ready">Ready</option>
+          <option value="Pending">Pending</option>
+          <option value="In Oven">In Progress</option>
+          <option value="Ready">Completed</option>
         </select>
       </div>
 
@@ -71,8 +72,8 @@ export default function Form({ onAddTask }) {
         <label>Assigned Baker</label>
         <input
           type="text"
-          value={owner}
-          onChange={(e) => setOwner(e.target.value)}
+          value={name}
+          onChange={(e) => setName(e.target.value)}
           placeholder="e.g., Chef Marie"
           required
         />
