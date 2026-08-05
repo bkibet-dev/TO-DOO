@@ -1,6 +1,6 @@
 import {useState} from 'react';
-// import Form from './components/Form';
-// import OrderList from './components/Order.list';
+import Form from './components/Form';
+import OrderList from './components/Order.list';
 import './App.css';
 
 export default function App() {
@@ -19,9 +19,6 @@ export default function App() {
     status: 'Completed'
   }]);
 
-  // const [search, setSearch] = useState("");
-  // const [filter, setFilter] = useState("All");
-
   const handleAddTask = (newTask) => {
     setTasks((prevTasks) => [
       ...prevTasks,
@@ -37,30 +34,6 @@ export default function App() {
       prevTasks.filter((task) => task.id !== id)
     );
   };
-
-  // const handleToggleStatus = (id) => {
-  //   setTasks((prevTasks) =>
-  //     prevTasks.map((task) =>
-  //       task.id === id ? { ...task, status: task.status === 'Pending' ? 'Completed' : 'Pending' } : task
-  //     )
-  //   );
-  // };
-
-  // const filteredTasks = tasks.filter((task) => {
-  //   const matchesSearch =
-  //     task.name.toLowerCase().includes(search.toLowerCase()) ||
-  //     task.title.toLowerCase().includes(search.toLowerCase());
-  //   const matchesFilter = filter === 'All' || task.status === filter;
-  //   return matchesSearch && matchesFilter;
-  // });
-
-  // const totalOrders = tasks.length;
-  // const pendingOrders = tasks.filter(
-  //   (task) => task.status === 'Pending'
-  // ).length;
-  // const completedOrders = tasks.filter(
-  //   (task) => task.status === 'Completed'
-  // ).length;
 
   return (
       <>
