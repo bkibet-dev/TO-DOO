@@ -20,4 +20,4 @@ A real-time React order management application
   * **Crimson Wine:** `#7B021D`
 * **Typography:**
   * **Headings:** Luxury editorial serif (e.g., *Playfair Display*)
-  * **UI Elements:** Clean modern sans-serif (e.g., *Montserrat*)
+  * **UI Elements:** Clean modern sans-serif (e.g., *Monteserrat*)
