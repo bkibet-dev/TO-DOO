@@ -21,7 +21,24 @@ export default function App() {
 
   return (
     <>
-    
+      <div className="app-container">
+    <header className="app-header">
+      <h1>Bakery Order Tracker</h1>
+      <p>Manage customer orders efficiently</p>
+    </header>
+
+    <main className="app-main">
+      <section className="form-section">
+        <h2>Add Order</h2>
+        <Form />
+      </section>
+
+      <section className="list-section">
+        <h2>Current Orders</h2>
+        <OrderList tasks={tasks} />
+      </section>
+    </main>
+  </div>
     </>
   )
 }
