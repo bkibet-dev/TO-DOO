@@ -3,6 +3,7 @@ import { useState } from 'react';
 export default function Form({ onAddTask }) {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
+  const [quantity, setQuantity] = useState('');
   const [dueDate, setDueDate] = useState('');
   const [status, setStatus] = useState('Pending');
   const [name, setName] = useState('');
@@ -14,6 +15,7 @@ export default function Form({ onAddTask }) {
     onAddTask({
       title,
       description,
+      quantity : Number(quantity),
       dueDate,
       status,
       name,
@@ -21,6 +23,7 @@ export default function Form({ onAddTask }) {
 
     setTitle('');
     setDescription('');
+    setQuantity('');
     setDueDate('');
     setStatus('Pending');
     setName('');
@@ -45,6 +48,17 @@ export default function Form({ onAddTask }) {
           value={description}
           onChange={(e) => setDescription(e.target.value)}
           placeholder="Recipe notes or special instructions..."
+        />
+      </div>
+
+      <div className="form-group">
+        <label>Quantity</label>
+        <input
+          type="number"
+          value={quantity}
+          onChange={(e) => setQuantity(e.target.value)}
+          placeholder="e.g., 10"
+          required
         />
       </div>
 
