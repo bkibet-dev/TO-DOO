@@ -19,6 +19,9 @@ export default function App() {
     status: 'Completed'
   }]);
 
+  const [search, setSearch] = useState("");
+  const [filter, setFilter] = useState("All");
+
   const handleAddTask = (newTask) => {
     setTasks((prevTasks) => [
       ...prevTasks,
@@ -42,6 +45,14 @@ export default function App() {
       )
     );
   };
+
+  const filteredTasks = tasks.filter((task) => {
+    const matchesSearch =
+      task.name.toLowerCase().includes(search.toLowerCase()) ||
+      task.title.toLowerCase().includes(search.toLowerCase());
+    const matchesFilter = filter === 'All' || task.status === filter;
+    return matchesSearch && matchesFilter;
+  });
 
   return (
       <>
