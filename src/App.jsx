@@ -1,6 +1,6 @@
 import {useState} from 'react';
-import Form from './components/Form';
-import OrderList from './components/Order.list';
+// import Form from './components/Form';
+// import OrderList from './components/Order.list';
 import './App.css';
 
 export default function App() {
@@ -66,8 +66,8 @@ export default function App() {
       <>
         <div className= "App">
           <h1>Bakery Order Tracker</h1>
-          <Form onAddTask={handleAddTask} />
-          <OrderList tasks={tasks} onDelete={handleDeleteTask} onToggleStatus={handleToggleStatus} />
+          {/* <Form onAddTask={handleAddTask} />
+          <OrderList tasks={tasks} onDelete={handleDeleteTask} onToggleStatus={handleToggleStatus} /> */}
         </div>
       </>
   )
