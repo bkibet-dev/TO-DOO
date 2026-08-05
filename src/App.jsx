@@ -42,11 +42,11 @@ export default function App() {
         <main className="app-main">
           <section className="form-section">
             <h2>Add Order</h2>
-            <Form />
+            <Form onAddTask={handleAddTask} />
           </section>
           <section className="list-section">
             <h2>Current Orders</h2>
-            <OrderList tasks={tasks} />
+            <OrderList tasks={tasks} onDeleteTask={handleDeleteTask} />
           </section>
         </main>
       </div>
